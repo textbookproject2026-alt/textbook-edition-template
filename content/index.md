@@ -4,7 +4,7 @@ title: Welcome
 
 # Department Edition Template
 
-This is the placeholder front page of a department edition. If you can read UPSTREAM-EDIT.
+This is the placeholder front page of a department edition. If you can read
 this on a live site, the template deployed correctly.
 
 Coordinators: replace this file and add your chapters in the `content/`
