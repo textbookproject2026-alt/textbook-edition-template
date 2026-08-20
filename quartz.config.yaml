@@ -300,11 +300,13 @@ plugins:
       # like https://plausible.io/js/pa-XXXXXXXXXX.js
       # Leave "" and analytics simply stays off — nothing breaks.
       plausibleScriptSrc: ""
-      # Hypothes.is group-locking hook — INACTIVE until the Publisher-tier
-      # decision (risk R1, Week 4). Config-based locking via the `services`
-      # array 404s on the standard tier (see hypothesis-spike-baseline.md).
-      # When Publisher access lands, set the group ID here and uncomment the
-      # services block in edition-integrations/src/index.ts.
+      # Hypothes.is group-locking hook — UNUSED BY DECISION. The Publisher
+      # tier will not be bought (risk R1, closed as not-adopted), so per-cohort
+      # isolation is out of scope and this stays empty. Config-based locking via
+      # the `services` array 404s on the standard tier anyway (see
+      # hypothesis-spike-baseline.md). Kept as documented dead code alongside
+      # the commented services block in edition-integrations/src/index.ts; do
+      # not fill it in or uncomment that block.
       hypothesisGroupId: ""
 
   # "Edit on GitHub" link on every page, mapped from Quartz's own

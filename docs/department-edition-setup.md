@@ -116,11 +116,15 @@ four lines marked `← EDIT`: [SCREENSHOT: editing quartz.config.yaml]
 
 Click **Commit changes** when done.
 
-**About `hypothesisGroupId`:** leave it as `""`. Readers can highlight and
-annotate pages from day one using the sidebar on the right edge. Right now
-those annotations are on Hypothes.is's public layer; department-private
-annotation groups are switched on centrally later — you'll receive a group ID
-and a one-line instruction when that happens. Nothing for you to do today.
+**About `hypothesisGroupId`:** leave it as `""` — permanently. Readers can
+highlight and annotate pages from day one using the sidebar on the right edge,
+and those annotations live on Hypothes.is's public layer, which every edition
+shares. Department-private annotation groups are **not** being switched on
+centrally: they would need Hypothes.is's Publisher tier, which the project
+decided not to buy, so per-cohort isolation is out of scope rather than
+pending. The setting is inert and stays empty. If you want a cohort-only
+discussion you can create a Hypothes.is group yourself and ask students to
+pick it in the sidebar, but nothing in the site configures or enforces it.
 
 ## Step 4 — Put it online (Cloudflare Pages)
 
@@ -226,11 +230,11 @@ Work through it on your live site before you send the address to anyone.
       no visitor figures. What it must never be is another edition's script,
       which quietly files your traffic in someone else's dashboard. Confirm by
       visiting a few pages and watching your own Plausible dashboard.
-- [ ] **Hypothes.is group.** Optional. Leaving `hypothesisGroupId` as `""` is
-      a perfectly good answer — annotation works from day one on the public
-      layer. A group is only for keeping one cohort's comments to themselves,
-      and is arranged centrally (see the note in Step 3). Tick this once
-      you've decided which you want, rather than by default.
+- [ ] **Hypothes.is group.** `hypothesisGroupId` is `""` and stays that way —
+      the setting is inert (see the note in Step 3). Annotation works from day
+      one on the shared public layer. If you want a cohort-only discussion, you
+      create the Hypothes.is group yourself and tell students to select it in
+      the sidebar; the site does not configure or enforce it.
 
 ---
 
