@@ -104,9 +104,9 @@
         "name": "edit-on-github"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "eece8e64d49c37e92d0e4bcb21ae80eb5e4fd40a",
+      "commit": "8f4e323d07116ce5ba37dc808cc993a1aa59447d",
       "subdir": "plugins/edit-on-github",
-      "installedAt": "2026-07-03T10:45:54.977Z"
+      "installedAt": "2026-09-04T14:21:04.073Z"
     },
     "edition-integrations": {
       "source": {
@@ -115,9 +115,9 @@
         "name": "edition-integrations"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "eece8e64d49c37e92d0e4bcb21ae80eb5e4fd40a",
+      "commit": "8f4e323d07116ce5ba37dc808cc993a1aa59447d",
       "subdir": "plugins/edition-integrations",
-      "installedAt": "2026-07-03T10:45:54.968Z"
+      "installedAt": "2026-09-04T14:21:04.065Z"
     },
     "encrypted-pages": {
       "source": "github:quartz-community/encrypted-pages",
