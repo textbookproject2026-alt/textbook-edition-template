@@ -226,7 +226,7 @@ plugins:
     enabled: true
     options:
       links:
-        Canonical textbook: https://bptext2026.xyz # ← swap to production domain at cutover
+        Canonical textbook: https://confused4now.org
         Licence (CC-BY-SA-4.0): https://creativecommons.org/licenses/by-sa/4.0/
   - source: github:quartz-community/recent-notes
     enabled: false
