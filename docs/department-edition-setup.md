@@ -11,8 +11,9 @@ This is the **technical companion**. It covers the setup in condensed form and
 then the parts no browser can do: updating the site machinery and the plugins,
 which need a terminal.
 
-- **Course coordinators** should start with **`for-course-coordinators.md`** in
-  the textbook maintainer's vault. It is the fuller walkthrough of the same
+- **Course coordinators** should start with
+  **[for-course-coordinators.md](for-course-coordinators.md)**, beside this guide.
+  It is the fuller walkthrough of the same
   setup — more screenshots, a worked example of localising a chapter, and the
   yearly content-update routine. Come back here for
   [Keeping your edition up to date](#keeping-your-edition-up-to-date).
@@ -38,7 +39,7 @@ about, so they don't read as disagreement:
 - A Cloudflare account (free — dash.cloudflare.com/sign-up). Cloudflare is
   what puts the site on the internet.
 - Your edition's chapters as markdown files (usually copied from the canonical
-  textbook — see `for-course-coordinators.md` for which folders to take).
+  textbook — see [for-course-coordinators.md](for-course-coordinators.md) for which folders to take).
 
 Nothing on that list is a developer tool, and nothing in Steps 1–5 asks you to
 type a command. Cloudflare does the build. A terminal — and Node.js 22 or newer —
@@ -385,7 +386,7 @@ When the canonical textbook is revised (once a year), the new text has to be
 copied into your `content/` folder the same way you first put it there — in the
 browser or in GitHub Desktop. No script does this for you, and
 `sync-upstream.sh` deliberately leaves `content/` alone: it treats everything in
-there as yours. `for-course-coordinators.md` has the full yearly routine,
+there as yours. [for-course-coordinators.md](for-course-coordinators.md) has the full yearly routine,
 including re-applying any localisations the new files overwrote. When new
 chapters arrive, repeat the linked-pages check from Step 2: fresh chapters bring
 fresh links, and fresh 404s with them.
