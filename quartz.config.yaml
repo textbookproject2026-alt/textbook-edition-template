@@ -29,6 +29,10 @@ configuration:
     - private
     - templates
     - .obsidian
+  # Overridden by design.yaml (edition-integrations, BOOK-ONE-TO-QUARTZ §4a), the
+  # same design as every platform book. Quartz still needs the block to build,
+  # but its values never reach the page. Colours and fonts are changed in
+  # quartz-edition-extras' plugins/edition-integrations/design.yaml, not here.
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -152,14 +156,9 @@ plugins:
     layout:
       position: left
       priority: 50
-  # Deviation from default: graph OFF per visual-direction-v1 differ #3
-  # ("In Quartz derivatives, ship the graph off by default") — the right rail
-  # belongs to the outline + Hypothes.is panel.
-  - source: github:quartz-community/graph
-    enabled: false
-    layout:
-      position: right
-      priority: 10
+  # The graph is on, as in every platform book (BOOK-ONE-TO-QUARTZ D11): the
+  # platform's fork, textbook-graph, below with the other platform plugins.
+  # textbook-registry's parity checks that its block matches the builder's.
   - source: github:quartz-community/search
     enabled: true
     layout:
@@ -308,9 +307,45 @@ plugins:
       # the commented services block in edition-integrations/src/index.ts; do
       # not fill it in or uncomment that block.
       hypothesisGroupId: ""
+      # Optional, with plausibleScriptSrc above: your site address (as
+      # baseUrl). Plausible then counts only there, not on *.pages.dev
+      # previews. Leave "" to count everywhere the site is served.
+      siteDomain: ""
+      # The reader tools every platform book has: the "Tag your annotation"
+      # panel, the per-page annotation count, and paragraph numbers (¶) with a
+      # reader's toggle. Set any to false to leave it out.
+      tagHelper: true
+      annotationBadge: true
+      paragraphNumbers: true
 
-  # "Edit on GitHub" link on every page, mapped from Quartz's own
-  # slug→source-file data (fileData.filePath) — no path reverse-mapping needed.
+  # The graph: quartz-community/graph with nodes coloured by topic (frontmatter
+  # `topic:`, else the first tag), always-on labels and a topic legend.
+  # Upstream's options; `concept` is a marker for concept pages, not a subject,
+  # so it isn't drawn as a tag node (the portal skips it for the same reason).
+  - source:
+      repo: "https://github.com/textbookproject2026-alt/quartz-edition-extras.git"
+      subdir: plugins/textbook-graph
+      name: textbook-graph
+    enabled: true
+    # The local graph is spread wider than upstream's (linkDistance 30,
+    # repelForce 0.5), with slightly smaller labels, so its always-on labels
+    # have room in the 250px rail. Measured on book one's Chapter 3: about 6
+    # of 9 labels fit at upstream's spacing, about 8.6 of 9 at this.
+    options:
+      localGraph:
+        removeTags: [concept]
+        linkDistance: 80
+        repelForce: 1.2
+        fontSize: 0.55
+      globalGraph:
+        removeTags: [concept]
+    layout:
+      position: right
+      priority: 10
+
+  # The controls row on every page: Edit on GitHub and View revision history,
+  # mapped from Quartz's own slug→source-file data. (Books also get "Suggest an
+  # edit"; an edition has no suggest endpoint, so it stays hidden.)
   - source:
       repo: "https://github.com/textbookproject2026-alt/quartz-edition-extras.git"
       subdir: plugins/edit-on-github

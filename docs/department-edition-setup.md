@@ -18,6 +18,8 @@ which need a terminal.
   yearly content-update routine. Come back here for
   [Keeping your edition up to date](#keeping-your-edition-up-to-date).
 - **Technical contacts** can work from this guide alone.
+- **The platform's technical contact**, who publishes changes to editions, reads
+  [updating-department-editions.md](updating-department-editions.md).
 
 The two guides describe **one** setup, not two. Both say: **fork** the template
 (never "Use this template"), change **four** settings in `quartz.config.yaml`,
