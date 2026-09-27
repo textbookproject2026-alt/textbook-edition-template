@@ -2,11 +2,11 @@
 
 **A guide for course coordinators**
 
-> **The canonical textbook was retired on 27 Sep 2026.** *Education Tool Project 2026*
-> (`textbookproject2026-alt/textbook`) is no longer published on the platform, and
-> no new yearly releases will come. Its chapters stay on GitHub, so an existing
-> edition keeps working and can still copy them, but start a new edition only after
-> checking with the platform owner.
+> **The canonical textbook is *Ontology for Social Research: A Critical Introduction*** (`textbookproject2026-alt/ontology-for-social-research-a-criti`, at
+> <https://ontology-for-social-research-a-criti.confused4now.org>) since 27 Sep 2026. The previous one, *Education Tool Project 2026*
+> (`textbookproject2026-alt/textbook`), was retired from the platform that day. An
+> edition made from it keeps working, and its chapters stay on GitHub, but no new
+> releases of it will come.
 
 This guide walks you through creating your own department edition of the textbook: a copy of the chapters you choose, on your own web address, sharing the textbook's public annotation layer with every other edition. You do everything through websites and one free desktop app.
 
@@ -26,7 +26,7 @@ A *repository* (repo) is a project folder hosted on GitHub. This setup involves 
 
 | | The textbook | The site template |
 |---|---|---|
-| **Address** | `github.com/textbookproject2026-alt/textbook` | `github.com/textbookproject2026-alt/textbook-edition-template` |
+| **Address** | `github.com/textbookproject2026-alt/ontology-for-social-research-a-criti` | `github.com/textbookproject2026-alt/textbook-edition-template` |
 | **What it is** | The book itself — every chapter, figure, and reference, maintained by the textbook maintainer | The website machinery that turns markdown chapters into a readable site |
 | **What you do with it** | **Copy from it.** You take the chapters you want. You never edit this repo directly. | **Fork it.** Your fork becomes *your* repo, *your* site. This is where all your work happens. |
 
@@ -101,7 +101,7 @@ You now have the repo as a normal folder on your computer. **Show in Explorer / 
 
 Now you fill the empty `content` folder with the chapters you want, copied from the canonical textbook.
 
-1. In your web browser, open `github.com/textbookproject2026-alt/textbook`.
+1. In your web browser, open `github.com/textbookproject2026-alt/ontology-for-social-research-a-criti`.
 2. Click the green **Code** button, then **Download ZIP**.
 
    [SCREENSHOT: canonical textbook repo with the green Code button open and Download ZIP highlighted]
@@ -267,7 +267,7 @@ If you would rather your cohort talked among themselves, you can set up a **priv
 
 There is no way to pre-select the group for them. Doing that would need Hypothes.is's Publisher tier, which the project has decided not to buy, so a student who forgets the dropdown posts to "Public" — say so plainly when you brief them. If you do run a group, it is worth **emailing the maintainer its name and link**: the weekly annotation backup covers a group only once it is added to the book's entry in the platform registry, which the maintainer asks the platform owner to do, and the account that makes the backup has to be invited into the group.
 
-**Briefing your students.** There is a short student-facing guide to the annotation sidebar — reading comments, leaving one, and the two things students reliably get wrong (that comments are public, and that previous cohorts' comments are still on the page). Point them at it rather than writing your own: [Commenting in the margins](https://social-research-methods.confused4now.org/how-to-comment), on the canonical textbook's site. It assumes the default public layer, so if you do run a private group, add the dropdown instruction from point 6 yourself.
+**Briefing your students.** There is a short student-facing guide to the annotation sidebar — reading comments, leaving one, and the two things students reliably get wrong (that comments are public, and that previous cohorts' comments are still on the page). Point them at it rather than writing your own: [Commenting in the margins](https://ontology-for-social-research-a-criti.confused4now.org/how-to-comment), on the canonical textbook's site. It assumes the default public layer, so if you do run a private group, add the dropdown instruction from point 6 yourself.
 
 ---
 
@@ -309,7 +309,7 @@ Three things are worth knowing before the first announcement lands:
 Found a typo, a factual error, or an unclear passage — something wrong with the *book*, not specific to your edition? Don't just fix your copy; your fix would vanish at the next yearly update and nobody else would benefit. Instead, report it upstream:
 
 - the simplest route: use the **suggest-an-edit button on the canonical textbook site** and describe the fix, or
-- on `github.com/textbookproject2026-alt/textbook`, open the **Issues** tab → **New issue** and describe it there.
+- on `github.com/textbookproject2026-alt/ontology-for-social-research-a-criti`, open the **Issues** tab → **New issue** and describe it there.
 
 The maintainer folds accepted fixes into the next edition, and they flow back to every department edition through the yearly update.
 
