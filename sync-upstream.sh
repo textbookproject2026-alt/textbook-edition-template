@@ -12,7 +12,7 @@
 #
 # WHAT THIS DOES *NOT* UPDATE
 #   Your textbook chapters. Content updates are a separate, manual copy
-#   from the canonical textbook (textbookproject2026-alt/textbook) —
+#   from the canonical textbook (textbookproject2026-alt/ontology-for-social-research-a-criti) —
 #   see docs/for-course-coordinators.md, "When the textbook updates
 #   (yearly)". This script treats everything inside content/ as yours:
 #   if the template and your content ever disagree, your version wins.
