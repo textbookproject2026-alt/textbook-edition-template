@@ -104,9 +104,9 @@
         "name": "edit-on-github"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "8f4e323d07116ce5ba37dc808cc993a1aa59447d",
+      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
       "subdir": "plugins/edit-on-github",
-      "installedAt": "2026-09-04T14:21:04.073Z"
+      "installedAt": "2026-09-27T07:10:59.000Z"
     },
     "edition-integrations": {
       "source": {
@@ -115,9 +115,9 @@
         "name": "edition-integrations"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "8f4e323d07116ce5ba37dc808cc993a1aa59447d",
+      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
       "subdir": "plugins/edition-integrations",
-      "installedAt": "2026-09-04T14:21:04.065Z"
+      "installedAt": "2026-09-27T07:10:59.000Z"
     },
     "encrypted-pages": {
       "source": "github:quartz-community/encrypted-pages",
@@ -160,12 +160,6 @@
       "resolved": "https://github.com/quartz-community/github-flavored-markdown.git",
       "commit": "3eabbaa252ce175665ab3f62e1af25948a83e8b6",
       "installedAt": "2026-07-03T10:45:30.303Z"
-    },
-    "graph": {
-      "source": "github:quartz-community/graph",
-      "resolved": "https://github.com/quartz-community/graph.git",
-      "commit": "46f0ba1c3c0cc484697572e7bcf315fa384d80d2",
-      "installedAt": "2026-07-03T10:45:50.631Z"
     },
     "hard-line-breaks": {
       "source": "github:quartz-community/hard-line-breaks",
@@ -280,6 +274,17 @@
       "resolved": "https://github.com/quartz-community/unlisted-pages.git",
       "commit": "f512d8672862c5891e63d755ba04b66277e6d760",
       "installedAt": "2026-07-03T10:45:53.073Z"
+    },
+    "textbook-graph": {
+      "source": {
+        "repo": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
+        "subdir": "plugins/textbook-graph",
+        "name": "textbook-graph"
+      },
+      "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
+      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
+      "subdir": "plugins/textbook-graph",
+      "installedAt": "2026-09-27T07:10:59.000Z"
     }
   }
 }
