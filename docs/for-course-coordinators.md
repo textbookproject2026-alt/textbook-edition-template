@@ -2,6 +2,12 @@
 
 **A guide for course coordinators**
 
+> **The canonical textbook was retired on 27 Sep 2026.** *Education Tool Project 2026*
+> (`textbookproject2026-alt/textbook`) is no longer published on the platform, and
+> no new yearly releases will come. Its chapters stay on GitHub, so an existing
+> edition keeps working and can still copy them, but start a new edition only after
+> checking with the platform owner.
+
 This guide walks you through creating your own department edition of the textbook: a copy of the chapters you choose, on your own web address, sharing the textbook's public annotation layer with every other edition. You do everything through websites and one free desktop app.
 
 **Setting up needs no terminal, and neither does the yearly content update.** Steps 1–8 below, and the yearly copy of revised chapters, are all browser and GitHub Desktop. If a tutorial elsewhere tells you to type a command as part of *this* work, stop and check with the maintainer first — generic Quartz tutorials in particular can damage your settings file (see the warning in Step 7).
