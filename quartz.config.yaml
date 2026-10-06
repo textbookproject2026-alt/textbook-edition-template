@@ -187,13 +187,16 @@ plugins:
     layout:
       position: beforeBody
       priority: 30
+  # Off, as on every platform book (quartz-book#49): the edition's title is in
+  # edit-on-github's sticky header.
   - source: github:quartz-community/page-title
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 10
-  # Deviation from default: dark-mode toggle OFF — canonical edition is
-  # light-only; one family, one appearance. Flip to true if Brandon wants it.
+  # Stays OFF: the reader's one theme control is the header's Appearance panel
+  # (Aa: Auto, Light, Dark), run by edition-integrations, on Quartz's own `theme`
+  # key. Turning this on would give readers a second, conflicting toggle.
   - source: github:quartz-community/darkmode
     enabled: false
     layout:
@@ -206,8 +209,9 @@ plugins:
       position: left
       priority: 35
       group: toolbar
+  # Off, as on every platform book: the header carries the page's place.
   - source: github:quartz-community/breadcrumbs
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 5
@@ -343,9 +347,11 @@ plugins:
       position: right
       priority: 10
 
-  # The controls row on every page: Edit on GitHub and View revision history,
-  # mapped from Quartz's own slug→source-file data. (Books also get "Suggest an
-  # edit"; an edition has no suggest endpoint, so it stays hidden.)
+  # The sticky header on every page: the edition's title and the page's place,
+  # Search, Contribute (Edit on GitHub ↗, Public comment, How contributing works;
+  # an edition has no suggest endpoint, so no editor and no Note to the authors),
+  # Annotate, Appearance (Aa) and ⋯ (Cite, Print, Page history, What links here,
+  # Download, View source).
   - source:
       repo: "https://github.com/textbookproject2026-alt/quartz-edition-extras.git"
       subdir: plugins/edit-on-github
@@ -354,9 +360,10 @@ plugins:
     options:
       repo: "OWNER/REPO" # ← EDIT (guide step 3d) your edition's repo, e.g. biology-dept/textbook-biology-edition
       branch: main
+      licence: CC-BY-SA-4.0 # the canonical textbook's licence, for Cite this page
     layout:
       position: beforeBody
-      priority: 25 # sits with the page meta, under the title
+      priority: 1 # first, above the page's title
 
 layout:
   groups:
