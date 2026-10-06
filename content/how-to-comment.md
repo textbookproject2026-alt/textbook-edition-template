@@ -6,10 +6,10 @@ There are two ways to help with this edition. They differ in **who sees what you
 write**, and in **which account you need**. Both are in the **Contribute** menu at
 the top of every page.
 
-|                    | Who sees it                                                                                     | Account                                                  |
-| ------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| **Edit on GitHub** | The edition's maintainers review it. The proposal is public on the edition's GitHub repository. | A free [GitHub account](https://github.com/signup)       |
-| **Public comment** | Everyone reading the page, with your Hypothes.is username.                                      | A free [Hypothes.is account](https://hypothes.is/signup) |
+|                    | Who sees it                                                                                                                    | Account                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| **Edit on GitHub** | The edition's maintainers review it. The proposal is public on the edition's GitHub repository and shows your GitHub username. | A free [GitHub account](https://github.com/signup)       |
+| **Public comment** | Anyone on the internet, with your Hypothes.is username.                                                                        | A free [Hypothes.is account](https://hypothes.is/signup) |
 
 ---
 
@@ -18,7 +18,8 @@ the top of every page.
 Change the wording on GitHub. Choose **Contribute → Edit on GitHub ↗**: the
 page's file opens on GitHub, where you can edit it and propose your change. It goes
 to the edition's maintainers as a proposal, and nothing in the edition changes
-until they accept it. The proposal is public on the edition's GitHub repository.
+until they accept it. The proposal is public on the edition's GitHub repository and shows your GitHub
+username.
 
 ## Public comment
 
