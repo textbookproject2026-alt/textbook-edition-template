@@ -104,7 +104,7 @@
         "name": "edit-on-github"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
+      "commit": "08c35080485247155d541a80580cc7d2dd98b901",
       "subdir": "plugins/edit-on-github",
       "installedAt": "2026-09-27T07:10:59.000Z"
     },
@@ -115,7 +115,7 @@
         "name": "edition-integrations"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
+      "commit": "08c35080485247155d541a80580cc7d2dd98b901",
       "subdir": "plugins/edition-integrations",
       "installedAt": "2026-09-27T07:10:59.000Z"
     },
@@ -282,7 +282,7 @@
         "name": "textbook-graph"
       },
       "resolved": "https://github.com/textbookproject2026-alt/quartz-edition-extras.git",
-      "commit": "265bb8d5a0c0aab11a693408ab27a550264c6540",
+      "commit": "08c35080485247155d541a80580cc7d2dd98b901",
       "subdir": "plugins/textbook-graph",
       "installedAt": "2026-09-27T07:10:59.000Z"
     }
