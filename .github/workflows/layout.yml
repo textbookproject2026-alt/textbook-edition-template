@@ -1,0 +1,85 @@
+name: layout
+
+# The edition's reader layout, built as Cloudflare Pages builds it, checked by
+# quartz-book's layout checks (a dozen widths at and around each switch point in
+# Chromium and WebKit, and Android Chrome at 360, 390 and 412px) on its front
+# page. The summary goes on the pull request as one comment, updated on each push.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: layout-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Build the edition (Cloudflare Pages' build command)
+        run: |
+          npm ci
+          npx quartz plugin install
+          npx quartz build
+
+      - name: Check out quartz-book's checks
+        uses: actions/checkout@v6
+        with:
+          repository: textbookproject2026-alt/quartz-book
+          path: .checks
+          persist-credentials: false
+
+      - name: Install the checks and the browsers
+        working-directory: .checks
+        run: |
+          npm ci
+          npx playwright-core install --with-deps chromium webkit
+
+      - name: Layout checks (header, panels, scroll, reading)
+        working-directory: .checks
+        run: |
+          node test/serve-static.mjs "$GITHUB_WORKSPACE/public" 8803 &
+          sleep 1
+          node test/layout-checks.mjs http://127.0.0.1:8803/ "$RUNNER_TEMP/layout-checks" /
+
+      - name: Layout checks on the pull request
+        if: always() && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          [ -f "$RUNNER_TEMP/layout-checks/summary.md" ] || exit 0
+          body="$RUNNER_TEMP/layout-comment.md"
+          { echo "<!-- layout-checks -->"; cat "$RUNNER_TEMP/layout-checks/summary.md"; echo; echo "At \`${HEAD:0:7}\`; screenshots in the run's layout artifact."; } > "$body"
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" --paginate --jq '.[] | select(.body | startswith("<!-- layout-checks -->")) | .id' | head -1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F "body=@$body" --silent
+          else
+            gh api "repos/$GITHUB_REPOSITORY/issues/$PR/comments" -F "body=@$body" --silent
+          fi
+
+      - name: Keep the screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: layout
+          path: ${{ runner.temp }}/layout-checks
+          if-no-files-found: ignore
+          retention-days: 14
