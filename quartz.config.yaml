@@ -377,13 +377,18 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    # The "book" frame (quartz-edition-extras' edit-on-github) draws the page
+    # header in the grid's header row, so it sticks against the whole page.
+    content:
+      template: book
     folder:
+      template: book
       exclude:
         - reader-mode
       positions:
         right: []
     tag:
+      template: book
       exclude:
         - reader-mode
       positions:
