@@ -138,15 +138,13 @@ These are the same four values the coordinator guide calls Step 7, and the same
 four `resolving-sync-conflicts.md` calls "the four setup fields" — the lines you
 own, and the ones to keep on your side of any future merge conflict.
 
-**About `hypothesisGroupId`:** leave it as `""` — permanently. Readers can
-highlight and annotate pages from day one using the sidebar on the right edge,
-and those annotations live on Hypothes.is's public layer, which every edition
-shares. Department-private annotation groups are **not** being switched on
-centrally: they would need Hypothes.is's Publisher tier, which the project
-decided not to buy, so per-cohort isolation is out of scope rather than
-pending. The setting is inert and stays empty. If you want a cohort-only
-discussion you can create a Hypothes.is group yourself and ask students to
-pick it in the sidebar, but nothing in the site configures or enforces it.
+**About `publicAnnotations` and `hypothesisGroupId`:** leave them as they are
+(`false` and `""`). Margin comments (Hypothes.is) are switched off on editions
+for now, as on the platform's books: there is no shared public layer, your site
+loads no annotation sidebar, and the **Contribute** menu shows *Comment in the
+margin — Coming soon for classes*, greyed out. Comments for classes are coming
+soon: seen only by your class's members, in a group of your own. The
+coordinators' guide (Step 8) will say how when they arrive.
 
 ## Step 4 — Put it online (Cloudflare Pages)
 
@@ -213,15 +211,15 @@ under the project's **Custom domains** tab in Cloudflare, and update
 
 Open your live site and confirm:
 
-1. The front page renders, links are **purple**, and the overall look matches
+1. The front page renders, links are **deep olive**, and the overall look matches
    the canonical textbook (same fonts, same airy spacing). If the reading
    column looks noticeably wider than the canonical site's, tell the
    maintainer — it's a one-line style fix on their side.
 2. Clicking between chapters works, and the left sidebar shows your chapters.
 3. **Edit on GitHub** under a page title opens that exact file in *your*
    repository.
-4. The annotation sidebar tab appears at the right edge; highlighting a
-   sentence offers "Annotate".
+4. **Contribute** shows *Edit on GitHub* and, greyed out, *Comment in the
+   margin — Coming soon for classes*. There is no annotation sidebar.
 5. If you set up analytics (3c): visit a few pages, then check the Plausible
    dashboard — your visit should appear within a minute or two.
 
@@ -267,11 +265,9 @@ Work through it on your live site before you send the address to anyone.
       from the template's fork list, so a fork shows up there on the page's
       next rebuild. If yours never does, the likeliest cause is that the copy
       isn't a fork (see Step 1) — tell the maintainer.
-- [ ] **Hypothes.is group.** `hypothesisGroupId` is `""` and stays that way —
-      the setting is inert (see the note in Step 3). Annotation works from day
-      one on the shared public layer. If you want a cohort-only discussion, you
-      create the Hypothes.is group yourself and tell students to select it in
-      the sidebar; the site does not configure or enforce it.
+- [ ] **Margin comments.** `publicAnnotations: false` and `hypothesisGroupId: ""`
+      stay as they are (see the note in Step 3). Comments are switched off for
+      now; comments for classes are coming soon.
 
 ---
 
@@ -283,9 +279,9 @@ is set centrally in `quartz.config.yaml` (`enableSPA: false`).
 
 The instant-navigation mode is incompatible with the annotation sidebar: it
 tears the Hypothes.is panel out of the page on every click, and the panel
-cannot be revived afterwards. Editions accept slightly slower navigation in
-exchange for annotation that reliably works — which is also how the canonical
-Obsidian Publish site behaves. Please don't switch it back on.
+cannot be revived afterwards. Comments for classes will use that sidebar, so
+editions keep full page loads, as the platform's books do. Please don't switch
+it back on.
 
 ---
 
@@ -359,7 +355,7 @@ maintainer announces a template update.
 on their own.
 
 Most of what a reader actually sees — the sidebar, search, the table of
-contents, the "Edit on GitHub" link, the annotation and analytics integration —
+contents, the "Edit on GitHub" link, the comments and analytics integration —
 comes from plugins, and your fork pins each one to a specific version recorded
 in `quartz.lock.json`. The pinning is deliberate: your site can't change under
 you without warning. The price is that a fix only reaches you when you ask for
