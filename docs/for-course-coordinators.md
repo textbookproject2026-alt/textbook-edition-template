@@ -8,7 +8,7 @@
 > edition made from it keeps working, and its chapters stay on GitHub, but no new
 > releases of it will come.
 
-This guide walks you through creating your own department edition of the textbook: a copy of the chapters you choose, on your own web address, sharing the textbook's public annotation layer with every other edition. You do everything through websites and one free desktop app.
+This guide walks you through creating your own department edition of the textbook: a copy of the chapters you choose, on your own web address. You do everything through websites and one free desktop app.
 
 **Setting up needs no terminal, and neither does the yearly content update.** Steps 1–8 below, and the yearly copy of revised chapters, are all browser and GitHub Desktop. If a tutorial elsewhere tells you to type a command as part of *this* work, stop and check with the maintainer first — generic Quartz tutorials in particular can damage your settings file (see the warning in Step 7).
 
@@ -55,7 +55,7 @@ You need, in this order:
 1. **A free GitHub account** — sign up at https://github.com
 2. **GitHub Desktop** installed — free download at https://desktop.github.com (this is the one desktop app; it moves files between your computer and GitHub with buttons instead of commands)
 3. **A free Cloudflare account** — sign up at https://dash.cloudflare.com/sign-up (this hosts your site, at no cost)
-4. **A free Hypothes.is account** — sign up at https://hypothes.is (this powers the annotation sidebar)
+4. **A free Hypothes.is account** — not needed yet: margin comments are coming soon for classes (Step 8)
 5. **Your analytics line from the maintainer** — email the maintainer the web address you plan to use (you'll choose it in Step 6; something like `bio-edition-2027.pages.dev`). They will register it and send back a single line of text you'll paste in Step 7. You can request this at any point before Step 7.
 6. *(Optional)* **Obsidian** — free at https://obsidian.md. A pleasant editor for the chapters. Any text editor works; Obsidian just shows links and formatting nicely.
 
@@ -247,27 +247,11 @@ The easiest way to edit it is directly on github.com (no download/upload dance, 
 
 ---
 
-## Step 8 — Annotation: the public layer, and an optional group of your own (~10 min)
+## Step 8 — Comments in the margin: coming soon for classes
 
-Every page of your site carries an annotation sidebar: readers can highlight any sentence and attach a comment or question. Those comments go to Hypothes.is's **public layer**, which every edition shares with the canonical textbook — your edition does not get a discussion space of its own, and the platform does not create or configure one for you. This is the final arrangement, not a temporary one: per-cohort isolation was considered and not adopted.
+Margin comments (Hypothes.is) are switched off on editions for now, as on the platform's books: your site loads no annotation sidebar, and the **Contribute** menu shows *Comment in the margin — coming soon for classes*, greyed out. Nothing to set up.
 
-If you would rather your cohort talked among themselves, you can set up a **private Hypothes.is group** yourself. It is entirely manual and entirely optional — nothing in the site enforces it, and students choose the group in the sidebar each time they annotate.
-
-1. Log in at https://hypothes.is.
-2. From your account menu, choose **Create new private group**.
-3. Name it after the course and year, e.g. `BIO-201 2027–28` (make a fresh group each year — annotations stay with the group, so old cohorts' discussions don't bleed into new ones).
-4. On the group's page, copy the **invitation link**.
-
-   [SCREENSHOT: Hypothes.is group page with the invitation link visible]
-
-5. Share the invitation link with your students (course intro email / LMS). Following it creates their account and joins them to the group in one step.
-6. Tell students: when annotating on the site, **select the group by name in the dropdown at the top of the annotation sidebar** — the dropdown says "Public" until they change it. Annotations made in the group are visible only to group members; annotations left in "Public" are visible to everyone on the internet.
-
-   [SCREENSHOT: annotation sidebar open on the site with the group selector dropdown expanded]
-
-There is no way to pre-select the group for them. Doing that would need Hypothes.is's Publisher tier, which the project has decided not to buy, so a student who forgets the dropdown posts to "Public" — say so plainly when you brief them. If you do run a group, it is worth **emailing the maintainer its name and link**: the weekly annotation backup covers a group only once it is added to the book's entry in the platform registry, which the maintainer asks the platform owner to do, and the account that makes the backup has to be invited into the group.
-
-**Briefing your students.** There is a short student-facing guide to the annotation sidebar — reading comments, leaving one, and the two things students reliably get wrong (that comments are public, and that previous cohorts' comments are still on the page). Point them at it rather than writing your own: [Commenting in the margins](https://ontology-for-social-research-a-criti.confused4now.org/how-to-comment), on the canonical textbook's site. It assumes the default public layer, so if you do run a private group, add the dropdown instruction from point 6 yourself.
+What is coming: comments seen only by your class. You will make a private Hypothes.is group for the course, send its link to the platform's maintainer, and give students a link that opens your edition on that group, with no public layer at all. Until then, leave `publicAnnotations: false` and `hypothesisGroupId: ""` in `quartz.config.yaml` as they are.
 
 ---
 

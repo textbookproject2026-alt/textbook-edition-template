@@ -34,6 +34,10 @@ jobs:
 
       - name: Build the edition (Cloudflare Pages' build command)
         run: |
+          # With a Hypothes.is client, so the sidebar's layout is still checked;
+          # the edition itself loads none (publicAnnotations: false).
+          sed -i 's/^      publicAnnotations: false$/      publicAnnotations: true/' quartz.config.yaml
+          grep -q '^      publicAnnotations: true$' quartz.config.yaml
           npm ci
           npx quartz plugin install
           npx quartz build

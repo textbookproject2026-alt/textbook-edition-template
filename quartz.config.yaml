@@ -304,13 +304,13 @@ plugins:
       # like https://plausible.io/js/pa-XXXXXXXXXX.js
       # Leave "" and analytics simply stays off — nothing breaks.
       plausibleScriptSrc: ""
-      # Hypothes.is group-locking hook — UNUSED BY DECISION. The Publisher
-      # tier will not be bought (risk R1, closed as not-adopted), so per-cohort
-      # isolation is out of scope and this stays empty. Config-based locking via
-      # the `services` array 404s on the standard tier anyway (see
-      # hypothesis-spike-baseline.md). Kept as documented dead code alongside
-      # the commented services block in edition-integrations/src/index.ts; do
-      # not fill it in or uncomment that block.
+      # No Hypothes.is public layer, as on the platform's books: until a class
+      # group is set up, editions load no Hypothes.is at all, and Contribute
+      # shows "Comment in the margin — coming soon for classes", greyed out.
+      # hypothesisGroupId: a restricted Hypothes.is group (anyone reads, members
+      # post) that turns margin comments on, in that group and the ones listed
+      # in hypothesisGroups. Leave both empty until the platform says otherwise.
+      publicAnnotations: false
       hypothesisGroupId: ""
       # Optional, with plausibleScriptSrc above: your site address (as
       # baseUrl). Plausible then counts only there, not on *.pages.dev
