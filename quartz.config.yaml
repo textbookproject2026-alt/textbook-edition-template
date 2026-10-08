@@ -231,7 +231,7 @@ plugins:
       links:
         Canonical textbook: https://ontology-for-social-research-a-criti.confused4now.org
         Licence (CC-BY-SA-4.0): https://creativecommons.org/licenses/by-sa/4.0/
-        Privacy: https://confused4now.org/#privacy
+        Privacy: https://confused4now.org/privacy
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -319,7 +319,7 @@ plugins:
       # The platform's Privacy page: the first-visit privacy note (No tracking
       # cookies…, with Turn comments off and OK) links to it, as on every book.
       # "" leaves the note out.
-      privacyUrl: "https://confused4now.org/#privacy"
+      privacyUrl: "https://confused4now.org/privacy"
       # The reader tools every platform book has: the "Tag your annotation"
       # panel, the per-page annotation count, and paragraph numbers (¶) with a
       # reader's toggle. Set any to false to leave it out.
