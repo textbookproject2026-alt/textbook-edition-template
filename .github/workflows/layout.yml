@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -43,7 +43,7 @@ jobs:
           npx quartz build
 
       - name: Check out quartz-book's checks
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: textbookproject2026-alt/quartz-book
           path: .checks
